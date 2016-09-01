@@ -333,7 +333,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  focusContent: function focusContent() {
-      console.log("react-modal/focusContent", this.refs.content)
+      console.error("react-modal/focusContent", this.refs.content)
 	    this.refs.content.focus();
 	  },
 
@@ -444,7 +444,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    setTimeout(function () {
 	      if (modalElement.contains(document.activeElement)) return;
 	      var el = findTabbable(modalElement)[0] || modalElement;
-        console.log("react-modal/handleFocus", el)
+        console.error("react-modal/handleFocus", el)
 	      el.focus();
 	    }, 0);
 	  }
@@ -559,7 +559,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!leavingFinalTabbable) return;
 	  event.preventDefault();
 	  var target = tabbable[event.shiftKey ? tabbable.length - 1 : 0];
-    console.log("react-modal/defaultExport?", target)
+    console.error("react-modal/defaultExport?", target)
 	  target.focus();
 	};
 
